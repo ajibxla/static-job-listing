@@ -1,0 +1,386 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --desaturated-dark-cyan: hsl(180, 29%, 50%);
+  --Light-Grayish-Cyan-Background: hsl(180, 52%, 96%);
+  --Light-Grayish-Cyan-Tablets: hsl(180, 31%, 95%);
+  --Dark-Grayish-Cyan: hsl(180, 8%, 52%);
+  --Very-Dark-Grayish-Cyan: hsl(180, 14%, 20%);
+}
+
+html {
+  font-size: 16px;
+  font-family: "League Spartan", sans-serif;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: var(--Light-Grayish-Cyan-Background);
+}
+
+main {
+  height: inherit;
+  width: inherit;
+}
+
+main .first-section {
+  background-image: url("/Users/ajibolaokungbaye/static-job-listing/public/images/bg-header-mobile.svg");
+  background-color: #5ea5a4;
+  background-position: center;
+  width: 100;
+  height: 155px;
+  position: relative;
+}
+
+main .first-section .filter-bar {
+  position: absolute;
+  height: 0px;
+  width: 80%;
+  top: 100px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: flex;
+  border-radius: 5px;
+  box-shadow: -1px 29px 34px 0px rgba(95, 161, 168, 0.75);
+  -webkit-box-shadow: -1px 29px 34px 0px rgba(95, 161, 168, 0.75);
+  -moz-box-shadow: -1px 29px 34px 0px rgba(95, 161, 168, 0.75);
+  z-index: 10;
+  background-color: white;
+  transition: height ease 0.3s;
+}
+
+main .first-section .filter-bar.active {
+  min-height: 50px;
+  height: 100px;
+  max-height: 200px;
+}
+
+main .first-section .filter-bar .filtered-btns {
+  width: 70%;
+  height: 100%;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+main .first-section .filter-bar .clear-section {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+main .first-section .filter-bar .clear-section button {
+  background-color: white;
+  border: 0;
+  outline: 0;
+  font-size: 15px;
+  color: #828c8b;
+  cursor: pointer;
+  border-bottom: none;
+  display: none;
+  transition: display ease 0.3s;
+}
+
+main .first-section .filter-bar .clear-section button.active {
+  display: block;
+}
+
+main .first-section .filter-bar .clear-section button:hover {
+  color: #34393c;
+}
+/* Second Section */
+main .second-section {
+  margin: 0 auto;
+  margin-top: 120px;
+  width: 80%;
+}
+main .second-section .card {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  position: relative;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  border-left: 7px solid #5da2a4;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+}
+
+main .second-section .card .card-container .container-first-section > div {
+  margin-bottom: 15px;
+}
+
+main .second-section .card .card-container .container-first-section .logo {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: -25px;
+}
+
+main
+  .second-section
+  .card
+  .card-container
+  .container-first-section
+  .job-details {
+  height: auto;
+}
+
+main
+  .second-section
+  .card
+  .card-container
+  .container-first-section
+  .job-details
+  > div {
+  margin-bottom: 20px;
+}
+
+main .second-section .card .card-container .container-first-section .logo img {
+  height: 100%;
+  width: 100%;
+}
+
+main
+  .second-section
+  .card
+  .card-container
+  .container-first-section
+  .company--jobtags {
+  height: 100%;
+  width: 100%;
+  padding-top: 40px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+main
+  .second-section
+  .card
+  .card-container
+  .container-first-section
+  .company--jobtags
+  .company {
+  color: #5fa2a5;
+  font-weight: 700;
+}
+
+main
+  .second-section
+  .card
+  .card-container
+  .container-first-section
+  .company--jobtags
+  .jobtags {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+main .second-section .card .newtag {
+  background-color: #5fa2a5;
+  text-transform: uppercase;
+  color: white;
+  height: 30px;
+  border-radius: 50px;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+main .second-section .card .new {
+  padding-top: 3px;
+}
+
+main .second-section .card .featuretag {
+  background-color: #314240;
+  text-transform: uppercase;
+  color: white;
+  height: 30px;
+  border-radius: 50px;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+main .second-section .card .featured {
+  padding-top: 3px;
+}
+
+main .second-section .card .position {
+  color: #34393c;
+  font-weight: 700;
+  transition: color ease-in 0.1s;
+  cursor: pointer;
+}
+
+main .second-section .card .position:hover {
+  color: #5fa7a5;
+}
+
+main .second-section .card .date--location {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  color: #9aa29f;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #9aa29f;
+  flex-wrap: wrap;
+}
+
+main .second-section .card .date--location span {
+  height: 5px;
+  width: 5px;
+  border-radius: 100%;
+  background-color: #9aa29f;
+}
+
+main .second-section .card .container-second-section {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+main .second-section .card .container-second-section button {
+  height: 30px;
+  padding: 0 10px;
+  width: auto;
+  color: #71a69e;
+  background-color: #f0f6f6;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all ease-in 0.3s;
+}
+
+main .second-section .card .container-second-section button:hover {
+  color: #f0f6f6;
+  background-color: #71a69e;
+}
+
+/* filter btns */
+.filter-btn {
+  display: flex;
+  height: 30px;
+  align-items: center;
+  background-color: var(--Light-Grayish-Cyan-Tablets);
+  border-radius: 5px;
+}
+
+.filter-btn .filter-tag-btn {
+  display: flex;
+  align-items: center;
+  width: auto;
+  height: 100%;
+  padding: 0 5px;
+  color: var(--Dark-Grayish-Cyan);
+}
+
+.filter-btn .delete {
+  background-color: var(--desaturated-dark-cyan);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5px;
+  border-radius: 0 5px 5px 0px;
+  cursor: pointer;
+  transition: background-color ease 0.3s;
+}
+
+.filter-btn .delete:hover {
+  background-color: var(--Very-Dark-Grayish-Cyan);
+}
+
+@media screen and (min-width: 765px) {
+  main .second-section .card {
+    max-height: auto;
+    display: flex;
+    align-items: center;
+    padding-bottom: 0px;
+  }
+
+  main .second-section .card .card-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    padding: 30px 0;
+  }
+
+  main .second-section .card .card-container .container-first-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  main .second-section .card .card-container .container-first-section .logo {
+    height: 100px;
+    width: 100px;
+    position: initial;
+    top: 25px;
+  }
+
+  main
+    .second-section
+    .card
+    .card-container
+    .container-first-section
+    .company--jobtags {
+    padding-top: 0;
+    padding-bottom: 15px;
+  }
+
+  main .second-section .card .position {
+    padding-bottom: 15px;
+  }
+
+  main .second-section .card .date--location {
+    border-bottom: none;
+    padding-bottom: 0px;
+  }
+
+  main .second-section .card .card-container .container-first-section > div {
+    margin-bottom: 0;
+  }
+
+  main .second-section .card .date--location {
+    padding-bottom: 0px;
+    border-bottom: none;
+  }
+
+  main
+    .second-section
+    .card
+    .card-container
+    .container-first-section
+    .job-details
+    > div {
+    margin-bottom: 0px;
+  }
+}
